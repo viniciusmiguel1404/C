@@ -2,7 +2,6 @@
 
 int main()
 {
-    float altura
     float altura, largura;
 
     printf("Me diga a altura do terreno em metros: ");
