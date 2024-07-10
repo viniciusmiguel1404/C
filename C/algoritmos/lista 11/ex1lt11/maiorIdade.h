@@ -1,17 +1,29 @@
-int  maiorIdade(int vet[3])
+int maiorIdade(int vet[])
 {
-	int i, j, temporaria;
+    int i, j, maior;
+    for (i = 0; i <= 3; i++)
+    {
+        for (j = 0; j <= 3; j++)
+        {
+            if (vet[i] < vet[j])
+            {
+                maior = vet[j];
+            }
+        }
+    }
+    return maior;
+}
 
-	for(i=0;i<3;i++)
-	{
-		for(j=i+1;j<3;j++)
-		{
-			if(vet[i]>vet[j])
-			{
-				temporaria= vet[i];
-				vet[i]= vet[j];
-				vet[j]=temporaria;
-			}
-		}
-	}
+void repetirPrograma()
+{
+    char repetir;
+
+    do
+    {
+        printf("Deseja repetir o programa? (s/n): ");
+        scanf(" %c", &repetir);
+
+    } while (repetir == 's' || repetir == 'S');
+
+    printf("Programa encerrado.\n");
 }

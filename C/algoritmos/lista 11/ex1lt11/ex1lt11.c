@@ -1,36 +1,30 @@
 #include <stdio.h>
 #include "maiorIdade.h"
 
-
 int main()
 {
-	int vet[3];
-	char repetir;
-	do
-	{
-	printf("digite a idade do frank: ");
-	scanf("%d", &vet[0]);
+    int vet[3];
+    char repetir;
+    do
+    {
+        printf("Digite a idade do Frank: ");
+        scanf("%d", &vet[0]);
+        printf("digite a idade de Xutes: ");
+        scanf("%d", &vet[1]);
+        printf("Digite a idade de belks: ");
+        scanf("%d", &vet[2]);
 
-	printf("Digite a idade de Xutes: ");
-	scanf("%d", &vet[1]);
+        if (vet[0] == vet[1] && vet[1] == vet[2])
+        {
+            printf("Todos tem a mesma idade!\n");
+        }
+        else
+        {
+            printf("A maior idade eh: %d\n", maiorIdade(vet));
+        }
+        printf("Deseja repetir o programa? (s/n): ");
+        scanf(" %c", &repetir);
 
-	printf("Digite a idade de Belks ");
-	scanf("%d", &vet[2]);
-	if(vet[0]==vet[1]&& vet[1]== vet[2])
-	{
-		printf("\nAs idades são iguais: %d\n", vet[0]);
-	}
-	else
-	{
-	maiorIdade(vet);
-
-	printf("Maior idade %d\n", vet[2]);
-	}
-	setbuf(stdin, NULL);
-	printf("Deseja repetir o programa (S ou N) ");
-	scanf("%c", &repetir);
-	printf("\n");
-	}while(repetir==83 || repetir == 115);
-
-	return 0;
+    } while (repetir == 's' || repetir == 'S');
+    return 0;
 }
